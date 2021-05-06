@@ -1,5 +1,5 @@
  .typewriter h1 {
-    width: 11ch;
+    width: 11.5ch;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .10em solid #f4623a; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -13,7 +13,7 @@
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 11ch }
+    to { width: 11.5ch }
   }
   
   /* The typewriter cursor effect */
