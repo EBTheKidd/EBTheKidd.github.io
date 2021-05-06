@@ -3881,6 +3881,7 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  overflow-x: hidden;
 }
 
 .nav-link {
@@ -3963,6 +3964,8 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -4023,6 +4026,8 @@ input[type=button].btn-block {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  margin-right: 13%;
+  position: relative;
 }
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
