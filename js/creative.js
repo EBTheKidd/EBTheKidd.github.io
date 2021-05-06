@@ -7,8 +7,7 @@
   "use strict"; // Start of use strict
 
   if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
-    document.getElementById("navbar-toggler-btn").style.marginRight = "0px";
-    var bubbles = document.getElementsByClassName("bubbles")[0].style.width = "87%";
+    document.getElementById("languagesTile").style.marginTop = "-50px";
   }
 
   // Smooth scrolling using jQuery easing
