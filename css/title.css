@@ -1,28 +1,24 @@
-.wrapper-title {
-    height: 5vh;
-    /*This part is important for centering*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ .typewriter h1 {
+    width: 400px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid #f4623a; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 2s steps(30, end),
+      blink-caret .55s step-end infinite;
   }
   
-  .typing-demo {
-    width: 12ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 3em;
-  }
-  
+  /* The typing effect */
   @keyframes typing {
-    from {
-      width: 0
-    }
+    from { width: 0 }
+    to { width: 400px }
   }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f4623a; }
   }
+  
