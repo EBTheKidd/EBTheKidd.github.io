@@ -54,6 +54,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
   scrollbar-width: none;  /* Hide scrollbar for Firefox */
+  
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -4020,13 +4022,12 @@ input[type=button].btn-block {
 }
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 1rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  margin-right: 13%;
   position: relative;
 }
 .navbar-toggler:hover, .navbar-toggler:focus {
@@ -10155,4 +10156,56 @@ header.masthead h1 {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.fire {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 55px;
+  background: #f4623a;
+  border-radius: 999px;
+}
+.fire:hover {
+  animation: burn 1000ms ease-out forwards;
+}
+.fire:hover::before {
+  content: 'FIND OUT';
+  position: absolute;
+  left: 40px;
+  width: 100px;
+  height: 40px;
+  background: #ffe66e;
+  border-radius: 100%;
+  animation: flare 1000ms ease-out forwards;
+}
+.fire:hover::after {
+  content: 'MORE';
+  position: absolute;
+  right: 40px;
+  width: 100px;
+  height: 40px;
+  background: #ffe66e;
+  border-radius: 100%;
+  animation: flare 1000ms ease-out forwards;
+}
+@keyframes flare {
+  100% {
+    transform: translateY(-20px) scale(1.5);
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+@keyframes burn {
+  0% {
+    color: #ff826e;
+    background: #ffe66e;
+    box-shadow: 0 0 5px 0 #c8000a, 0 0 5px 0 rgba(230, 30, 10, 0.8), 0 0 5px 0 rgba(230, 230, 10, 0.6);
+  }
+  100% {
+    color: black;
+    background: white;
+    box-shadow: 0 -35px 40px 30px rgba(255, 130, 10, 0), 0 -30px 30px 10px rgba(230, 30, 10, 0), 0 -20px 10px 0 rgba(255, 255, 10, 0);
+  }
 }

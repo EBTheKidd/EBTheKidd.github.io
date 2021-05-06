@@ -6,6 +6,11 @@
     (function($) {
   "use strict"; // Start of use strict
 
+  if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
+    document.getElementById("navbar-toggler-btn").style.marginRight = "0px";
+    var bubbles = document.getElementsByClassName("bubbles")[0].style.width = "87%";
+  }
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -59,5 +64,7 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
+
+  
 
 })(jQuery); // End of use strict
