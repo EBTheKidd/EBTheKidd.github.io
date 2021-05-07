@@ -7,6 +7,9 @@
   "use strict"; // Start of use strict
 
   if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
+    // Fix Nav Button on mobile
+    document.getElementById("navbar-toggler-btn").style.float = "right";
+
     // Fix weird space between education tiles/rows
     document.getElementById("languagesTile").style.marginTop = "-50px";
   }
