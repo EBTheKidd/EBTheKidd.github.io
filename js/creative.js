@@ -7,8 +7,7 @@
   "use strict"; // Start of use strict
 
   if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
-    document.getElementsByTagName("header")[0].style.overflowX = "hidden";
-    document.getElementById("navbar-toggler-btn").style.marginRight = "10%";
+    // Fix weird space between education tiles/rows
     document.getElementById("languagesTile").style.marginTop = "-50px";
   }
 
