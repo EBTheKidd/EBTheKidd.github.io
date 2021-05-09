@@ -7,8 +7,23 @@
   "use strict"; // Start of use strict
 
   if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
-    // Fix Nav Button on mobile
+    var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+    // Fix Nav Button on mobile (sometimes it get messed up... idek...)
     document.getElementById("navbar-toggler-btn").style.float = "right !important";
+    document.getElementById("navbar-toggler-btn").style.marginRight = "0px !important";
+
+    // Expand sections for mobile
+    document.getElementById("introsection").style.height = y + "px";
+    //document.getElementById("edusection").style.height = y + "px";
+    document.getElementById("worksection").style.height = y + "px";
+    //document.getElementById("github").style.height = y + "px";
+    //document.getElementById("musicc").style.height = y + "px";
+    document.getElementById("contactsection").style.height = y -  + "px" - "1rem";
 
     // Fix weird space between education tiles/rows
     document.getElementById("languagesTile").style.marginTop = "-50px";

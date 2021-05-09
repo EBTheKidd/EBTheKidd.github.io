@@ -11,6 +11,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+ /* USE THIS TO OUTLINE EVERYTHIG
+ * { 
+  outline: 1px solid red;
+  outline-offset: -1px;
+}*/
 
  :root {
   --blue: #007bff;
