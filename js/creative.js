@@ -23,7 +23,7 @@
     document.getElementById("worksection").style.height = y + "px";
     //document.getElementById("github").style.height = y + "px";
     //document.getElementById("musicc").style.height = y + "px";
-    document.getElementById("contactsection").style.height = y -  + "px" - "1rem";
+    document.getElementById("contactsection").style.height = y  + "px";
 
     // Fix weird space between education tiles/rows
     document.getElementById("languagesTile").style.marginTop = "-50px";
