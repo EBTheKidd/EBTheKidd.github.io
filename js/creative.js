@@ -6,28 +6,8 @@
     (function($) {
   "use strict"; // Start of use strict
 
-  if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
-    var win = window,
-    doc = document,
-    docElem = doc.documentElement,
-    body = doc.getElementsByTagName('body')[0],
-    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
-    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
-    // Fix Nav Button on mobile (sometimes it get messed up... idek...)
-    document.getElementById("navbar-toggler-btn").style.float = "right !important";
-    document.getElementById("navbar-toggler-btn").style.marginRight = "0px !important";
 
-    // Expand sections for mobile
-    document.getElementById("introsection").style.height = y + "px";
-    //document.getElementById("edusection").style.height = y + "px";
-    document.getElementById("worksection").style.height = y + "px";
-    //document.getElementById("github").style.height = y + "px";
-    //document.getElementById("musicc").style.height = y + "px";
-    document.getElementById("contactsection").style.height = y  + "px";
-
-    // Fix weird space between education tiles/rows
-    document.getElementById("languagesTile").style.marginTop = "-50px";
-  }
+  
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -68,7 +48,7 @@
   $(window).scroll(navbarCollapse);
 
   // Magnific popup calls
-  $('#portfolio').magnificPopup({
+  $('#projects').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -86,3 +66,37 @@
   
 
 })(jQuery); // End of use strict
+
+if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {  
+  var win = window,
+  doc = document,
+  docElem = doc.documentElement,
+  body = doc.getElementsByTagName('body')[0],
+  x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+  y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+  // Fix Nav Button on mobile (sometimes it get messed up... idek...)
+  document.getElementById("navbar-toggler-btn").style.float = "right !important";
+  document.getElementById("navbar-toggler-btn").style.marginRight = "0px !important";
+
+  // Expand sections for mobile
+  document.getElementById("introsection").style.height = y + "px";
+  //document.getElementById("edusection").style.height = y + "px";
+  document.getElementById("worksection").style.height = y+15 + "px";
+  //document.getElementById("github").style.height = y + "px";
+  //document.getElementById("musicc").style.height = y + "px";
+  document.getElementById("contactsection").style.height = y  + "px";
+
+  // Fix Beat Store Height
+  document.getElementById("beatstore").style.height = 400  + "px";
+
+  // Fix weird space between education tiles/rows
+  document.getElementById("languagesTile").style.marginTop = "-50px";
+} else {
+  
+  // Expand sections for desktop\
+  document.getElementById("edusection").style.height = y/2 + "px";
+  document.getElementById("worksection").style.height = y/2 + "px";
+  //document.getElementById("github").style.height = y + "px";
+  document.getElementById("musicc").style.height = y + "px";
+  document.getElementById("contactsection").style.height = y  + "px";
+}
