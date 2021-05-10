@@ -78,25 +78,12 @@ if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini
   document.getElementById("navbar-toggler-btn").style.float = "right !important";
   document.getElementById("navbar-toggler-btn").style.marginRight = "0px !important";
 
-  // Expand sections for mobile
+  // Expand Intro for mobile
   document.getElementById("introsection").style.height = y + "px";
-  //document.getElementById("edusection").style.height = y + "px";
-  document.getElementById("worksection").style.height = y+15 + "px";
-  //document.getElementById("github").style.height = y + "px";
-  //document.getElementById("musicc").style.height = y + "px";
-  document.getElementById("contactsection").style.height = y  + "px";
 
   // Fix Beat Store Height
   document.getElementById("beatstore").style.height = 400  + "px";
 
   // Fix weird space between education tiles/rows
   document.getElementById("languagesTile").style.marginTop = "-50px";
-} else {
-  
-  // Expand sections for desktop\
-  document.getElementById("edusection").style.height = y/2 + "px";
-  document.getElementById("worksection").style.height = y/2 + "px";
-  //document.getElementById("github").style.height = y + "px";
-  document.getElementById("musicc").style.height = y + "px";
-  document.getElementById("contactsection").style.height = y  + "px";
 }
